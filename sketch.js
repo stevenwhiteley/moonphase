@@ -7,7 +7,7 @@ function setup() {
   noStroke();
   fill(200);
   moon = loadModel('assets/moon.obj', true);
-  img = loadImage('assets/Moontexture.jpg');
+  img = loadImage('assets/download.jpg');
 }
 
 function draw() {
