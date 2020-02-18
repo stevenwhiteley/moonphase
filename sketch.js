@@ -2,17 +2,12 @@ const radius = 200;
 let moon;
 let img;
 
-function preload() {
-  moon = loadModel('assets/moon.obj', true);
-  img = loadImage('assets/0.jpg');
-}
-
 function setup() {
   createCanvas(710, 400, WEBGL);
   noStroke();
   fill(200);
   moon = loadModel('assets/moon.obj', true);
-  img = loadImage('assets/0.jpg');
+  img = loadImage('assets/Moontexture.jpg');
 }
 
 function draw() {
