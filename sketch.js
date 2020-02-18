@@ -1,13 +1,18 @@
 const radius = 200;
 let moon;
-let moontexture;
+let img;
+
+function preload() {
+  moon = loadModel('assets/moon.obj', true);
+  img = loadImage('assets/0.jpg');
+}
 
 function setup() {
   createCanvas(710, 400, WEBGL);
   noStroke();
   fill(200);
   moon = loadModel('assets/moon.obj', true);
-  moontexture = loadImage('assets/moontexture.jpg', true);
+  img = loadImage('assets/0.jpg');
 }
 
 function draw() {
@@ -19,6 +24,6 @@ function draw() {
   translate(-1.5 * radius, 0, 0);
   //sphere(radius);
   translate(3 * radius, 0, 0);
-  texture(moontexture);
+  texture(img);
   model(moon);
 }
