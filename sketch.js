@@ -4,7 +4,7 @@ let img;
 let vid
 let theta = 1;
 let goddess
-let fr = 100
+
 
 
 function setup() {
@@ -72,7 +72,6 @@ rotateZ(theta*.5);
 function randomChord() {
   // find a random point on a circle
   push();
-  frameRate(fr);
   let angle1 = random(0, 2 * PI);
   let xpos1 = -1500 + -1500 * cos(angle1);
   let ypos1 = -1500 + -1500 * sin(angle1);
