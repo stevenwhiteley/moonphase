@@ -2,16 +2,14 @@ const radius = 200;
 let moon;
 let img;
 let vid
-let theta = 1;
+let theta = .08;
 let goddess
-
-
 
 function setup() {
   createCanvas(1600, 1000, WEBGL);
   //noStroke();
   fill(200);
-  moon = loadModel('assets/moon.obj', true);
+  moon = loadModel('assets/moon.obj');
   goddess = loadModel('assets/12328_Statue_v1_L2.obj');
   img = loadImage('assets/download.jpg');
   vid = createVideo(['assets/lumenglitches.mp4']);
@@ -20,7 +18,6 @@ function setup() {
 	    background(0);
 
   stroke(0, 0, 0, 15);
-
 
 }
 
@@ -31,14 +28,16 @@ function draw() {
 
   push(); 
   noStroke();
-  translate(-20, 90, 5);
-  rotateZ(theta * .5);
-  rotateX(theta*.5);
-  rotateY(theta*.5);
+ //rotateZ(theta*.4, [theta*-2]);
+  //rotateX(theta*.2, [-3]);
+  rotateY(theta*-.2, [-3]);
+  rotateZ(theta*-.9, [-3]);
   texture(vid);
-  scale(3);
+  scale(.2);
+    translate(2.3*radius, -4.2*radius, 2*radius);
   model(moon);
-      theta += 0.05;
+
+     // theta += .1;
   pop(); 
 
 push(); 
@@ -65,9 +64,7 @@ rotateZ(theta*.5);
       theta += 0.05;
   pop(); 
 
-
 }
-
 
 function randomChord() {
   // find a random point on a circle
