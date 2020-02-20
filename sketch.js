@@ -30,9 +30,9 @@ function draw() {
   //theta = radians(frames);
   noStroke();
  //rotateZ(theta*.4, [theta*-2]);
-  rotateX(theta*.4);
-  rotateY(theta*4);
-  rotateZ(theta*.4);
+  rotateX(theta*.08);
+  rotateY(theta*.8);
+  rotateZ(theta*.08);
   texture(vid);
   scale(.2);
     translate(2.3*radius, -4.2*radius, 2*radius);
