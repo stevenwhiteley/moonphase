@@ -9,7 +9,7 @@ function setup() {
   createCanvas(1600, 1000, WEBGL);
   //noStroke();
   fill(200);
-  moon = loadModel('assets/moon.obj');
+  moon = loadModel('assets/Moon.obj');
   goddess = loadModel('assets/12328_Statue_v1_L2.obj');
   img = loadImage('assets/download.jpg');
   vid = createVideo(['assets/lumenglitches.mp4']);
