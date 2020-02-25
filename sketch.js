@@ -12,9 +12,12 @@ function setup() {
   moon = loadModel('assets/moon.obj');
   goddess = loadModel('assets/12328_Statue_v1_L2.obj');
   img = loadImage('assets/download.jpg');
-  vid = createVideo(['assets/lumenglitches.mp4']);
+  vid = createVideo(['assets/transit.mov']);
   vid.loop();
   vid.hide();
+  //const vid = document.createElement('video')
+  //vid.preload = 'auto';
+  //vid.autoload = true;
 	    background(0);
 
   stroke(0, 0, 0, 15);
@@ -23,8 +26,8 @@ function setup() {
 
 function draw() {
 
-	randomChord();
-  randomChord();
+	//randomChord();
+  //randomChord();
 
   push(); 
   //theta = radians(frames);
@@ -67,19 +70,19 @@ rotateZ(theta*.5);
 
 }
 
-function randomChord() {
-  // find a random point on a circle
-  push();
-  let angle1 = random(0, 2 * PI);
-  let xpos1 = -1500 + -1500 * cos(angle1);
-  let ypos1 = -1500 + -1500 * sin(angle1);
+// function randomChord() {
+//   // find a random point on a circle
+//   push();
+//   let angle1 = random(0, 2 * PI);
+//   let xpos1 = -1500 + -1500 * cos(angle1);
+//   let ypos1 = -1500 + -1500 * sin(angle1);
 
-  // find another random point on the circle
-  let angle2 = random(0, 2 * PI);
-  let xpos2 = 500 + -800 * cos(angle2);
-  let ypos2 = 500 + -800 * sin(angle2);
-  stroke(color(random(255), random(255), random(255)));
-  // draw a line between them
-  line(xpos1, ypos1, xpos2, ypos2);
-  pop();
-}
+//   // find another random point on the circle
+//   let angle2 = random(0, 2 * PI);
+//   let xpos2 = 500 + -800 * cos(angle2);
+//   let ypos2 = 500 + -800 * sin(angle2);
+//   stroke(color(random(255), random(255), random(255)));
+//   // draw a line between them
+//   line(xpos1, ypos1, xpos2, ypos2);
+//   pop();
+//}
