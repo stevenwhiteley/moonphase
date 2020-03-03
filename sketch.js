@@ -2,7 +2,7 @@ const radius = 200;
 let moon;
 let img;
 let vid
-let theta = 1;
+let theta = .5;
 let goddess
 let playing = false;
 
@@ -45,15 +45,15 @@ function draw() {
   //theta = radians(frames);
   noStroke();
  //rotateZ(theta*.4, [theta*-2]);
-  rotateX(theta*.4);
-  rotateY(theta*.4);
-  //rotateZ(theta*.04);
+  rotateX(theta*.02);
+  rotateY(theta*.5);
+  rotateZ(theta*.02);
   texture(vid);
   scale(.2);
     translate(2, 2, 2);
   model(moon);
 
-     theta += .001;
+     theta += .0001;
   pop(); 
 
 push(); 
