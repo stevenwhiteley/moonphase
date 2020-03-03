@@ -4,6 +4,8 @@ let img;
 let vid
 let theta = 1;
 let goddess
+let playing = false;
+
 
 function setup() {
   createCanvas(1600, 1000, WEBGL);
@@ -15,15 +17,21 @@ function setup() {
   vid = createVideo(['assets/lumenglitches.mp4']);
   vid.loop();
   vid.hide();
-  //const vid = document.createElement('video')
-  vid.preload = 'auto';
-  vid.autoload = true;
-	    background(0);
+  button = createButton('play');
+  button.mousePressed(toggleVid);
 
+	background(0);
   stroke(0, 0, 0, 15);
 
-  function mousePressed() {
-  vid.loop(); // set the video to loop and start playing
+function toggleVid() {
+  if (playing) {
+    vid.pause();
+    button.html('play');
+  } else {
+    vid.loop();
+    button.html('pause');
+  }
+  playing = !playing;
 }
 
 }
