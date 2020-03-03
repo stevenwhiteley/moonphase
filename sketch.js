@@ -2,25 +2,29 @@ const radius = 200;
 let moon;
 let img;
 let vid
-let theta = 0;
+let theta = 1;
 let goddess
 
 function setup() {
   createCanvas(1600, 1000, WEBGL);
   //noStroke();
   fill(200);
-  moon = loadModel('assets/Moon.obj');
+  moon = loadModel('assets/moon.obj');
   goddess = loadModel('assets/12328_Statue_v1_L2.obj');
   img = loadImage('assets/download.jpg');
   vid = createVideo(['assets/lumenglitches.mp4']);
   vid.loop();
   vid.hide();
   //const vid = document.createElement('video')
-  //vid.preload = 'auto';
-  //vid.autoload = true;
+  vid.preload = 'auto';
+  vid.autoload = true;
 	    background(0);
 
   stroke(0, 0, 0, 15);
+
+  function mousePressed() {
+  vid.loop(); // set the video to loop and start playing
+}
 
 }
 
@@ -33,12 +37,12 @@ function draw() {
   //theta = radians(frames);
   noStroke();
  //rotateZ(theta*.4, [theta*-2]);
-  rotateX(theta*.08);
-  rotateY(theta*.8);
-  rotateZ(theta*.08);
+  rotateX(theta*.4);
+  rotateY(theta*.4);
+  //rotateZ(theta*.04);
   texture(vid);
   scale(.2);
-    translate(2.3*radius, -4.2*radius, 2*radius);
+    translate(2, 2, 2);
   model(moon);
 
      theta += .001;
