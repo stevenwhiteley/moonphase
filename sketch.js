@@ -11,7 +11,7 @@ function setup() {
   createCanvas(1600, 1000, WEBGL);
   //noStroke();
   fill(200);
-  moon = loadModel('assets/moon.obj');
+  moon = loadModel('assets/Moon.obj');
   goddess = loadModel('assets/12328_Statue_v1_L2.obj');
   img = loadImage('assets/download.jpg');
   vid = createVideo(['assets/lumenglitches.mp4']);
@@ -42,9 +42,7 @@ function draw() {
   randomChord();
 
   push(); 
-  //theta = radians(frames);
   noStroke();
- //rotateZ(theta*.4, [theta*-2]);
   rotateX(theta*.02);
   rotateY(theta*.5);
   rotateZ(theta*.02);
@@ -52,7 +50,6 @@ function draw() {
   scale(.2);
     translate(2, 2, 2);
   model(moon);
-
      theta += .0001;
   pop(); 
 
